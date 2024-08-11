@@ -1,6 +1,6 @@
 # File-Distribution-Tool
 
-This Project was problem statement of Tally Codebrewers 2024(System Programming) 
+This Project was problem statement of Tally Codebrewers 2024(System Programming)
 
 ## Overview
 This project is a Command-Line Interface (CLI) tool designed to facilitate file distribution across a network using multicast groups. The tool provides both sender and receiver functionalities, allowing Admin to send files to a multicast group and members can receive files from a admin. The tool includes role-based access contro.
