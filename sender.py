@@ -65,7 +65,7 @@ def send_multicast(group_ip, port, interface_ip, file_paths):
                     
             print('\n')
             print(f"File {file_name} sent to {group_ip}:{port} from interface {interface_ip}")
-            print(f"{byte_sent} bytes sent to of {file_size}")
+            print(f"{byte_sent} bytes sent of {file_size} bytes")
 
     except socket.timeout:
         print("Socket timeout occurred. Consider increasing the timeout duration.")
