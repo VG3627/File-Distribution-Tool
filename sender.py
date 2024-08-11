@@ -9,10 +9,6 @@ import threading
 
 BUFFER_SIZE = 1400 # Increased buffer size to optimize transmission
 
-# Setup encryption
-
-
-
 
 
 

@@ -13,10 +13,6 @@ active_file_locks = {}
 
 
 
-
-
-
-
 def receive_file(sock, group_ip, port, interface_ip):
     """Receive multiple files over UDP multicast with file-specific chunk indexing."""
     while True:
