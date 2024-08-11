@@ -5,3 +5,4 @@ Acknowledgement:
 3. Python.org - UDP programming
 4. www.cs.emory.edu,https://blog.finxter.com/how-to-send-udp-multicast-in-python/ - Multicast Programming
 5. https://www.ibm.com/docs/en/i/7.3?topic=designs-examples-using-multicasting-af-inet - information regarding multicast
+6. pyinstaller - A Python library used to bundle a Python application and all its dependencies into a single executable file.
