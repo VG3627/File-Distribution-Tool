@@ -39,10 +39,10 @@ def run_receiver(group_ip,port):
     except subprocess.CalledProcessError as e:
         print(f"Error occurred: {e}")
 
-def run_sender(file_paths, group_ip, port):
+def run_sender(file_paths, group_ip, port, interface_ip):
     """Start the sender code as a subprocess."""
     
-    command = [r'.\sender.exe', group_ip, port, '192.168.0.102']
+    command = [r'.\sender.exe', group_ip, port, interface_ip]
     for file in file_paths:
         command.append(file) 
 
@@ -133,7 +133,8 @@ def admin_actions():
                 for _ in range(num_files):
                     file_path = input("Enter the file path: ")
                     filepaths.append(file_path)
-                run_sender(filepaths, groups[group_name]['ip'],groups[group_name]['port'])
+                interface_ip = int(input("Enter your interface_ip "))
+                run_sender(filepaths, groups[group_name]['ip'],groups[group_name]['port'],interface_ip)
             else:
                 print("Invalid choice. Please select a valid number.")
         elif action == '2':
