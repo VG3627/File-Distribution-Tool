@@ -133,7 +133,8 @@ def admin_actions():
                 for _ in range(num_files):
                     file_path = input("Enter the file path: ")
                     filepaths.append(file_path)
-                interface_ip = int(input("Enter your interface_ip "))
+                
+                interface_ip = input("Enter your interface_ip :")
                 run_sender(filepaths, groups[group_name]['ip'],groups[group_name]['port'],interface_ip)
             else:
                 print("Invalid choice. Please select a valid number.")
