@@ -68,32 +68,13 @@ def receive_file(sock, group_ip, port, interface_ip):
                             
                             file.write(chunk_data)
                             byte_received += len(chunk_data)
-                            # Extract file name and chunk index
-                            # parts = chunk_data.split(b'|', 2)
-                            # if len(parts) != 3:
-                            #     print(f"Malformed chunk data received: {chunk_data}")
-                            #     continue
-
-                            # received_file_name = parts[0].decode()
-                            # index = int(parts[1].decode())
-                            # chunk = parts[2]
-
-                            # if received_file_name == file_name and index == expected_index:
-                            #     file.write(chunk)
-                            #     received_chunks[file_name][index] = True
-                            #     expected_index += 1
-                            # else:
-                            #     print(f"Out of order chunk received: Expected index {expected_index}, but got {index}")
-                            #     continue
+                           
                             
                             
                             expected_index += 1
                             if expected_index > (file_size + BUFFER_SIZE - 1) // BUFFER_SIZE:
                                 break
-                            # else:
-                            #     print(f"Out of order chunk received: Expected index {expected_index}, but got {index}")
-                            #     continue
-
+                        
                         except BlockingIOError:
                             # If nothing is received, continue without blocking
                             time.sleep(0.1)  # Slight delay to avoid tight loop
